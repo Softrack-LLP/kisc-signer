@@ -1,0 +1,25 @@
+language: java
+jdk:
+  - oraclejdk8
+#branches:
+#  only:
+#    - master
+notifications:
+  email:
+    recipients:
+      - magzhan.karasayev@allpay.kz
+      - sanzhar.aubakirov@innoforce.kz
+    on_success: change
+    on_failure: always
+
+
+install:  ./build.sh
+
+deploy:
+  provider: releases
+  api_key:
+    secure: XjTgnba8v40sexPAKTW/umfXOulVvZaybg9iLnjHRaqiKXr5QFhEH0hNfWc6rFNefC6zSuEjxCpN8KQMfDKPaPneIvhysqqH2o+9N5xhqAK8L5OyumcL1g/8O2/ZV10OCuXuELVuRt7xwcTFscZFc1j8Mf2Os4UrkM20jN+biqXGAzG/uoZO4dyokyPvUuQH1gc3o5QUB7iFCfW4ZmUSXZnqIGyQ0ywJ9xBMUojV31m8sZMhn42wMNsuXLzQKMiFzTKjGZPJOmF77pw0LbQgqX5McWPRX5A+2mu4umXuw4mp5QbIe7p8npJHWx0tFMUp1IPHef5MMIhWXR/m21At/vqxFDlV7cwh9CRYelsBjwYDJztNetIWhC+QY2nb8aEY+tlD4tCH5oeWirSOqdHxxks+fRGU9uqgBjJMh5D6bbfVRhmd3/YIDWTLMSA6lPnYsZpW3qQzzjnJhk7hRpvFmccDTIrZ2kvf2bq3iF9oQ90ImenpXlTaixjeWTXzp4r45aBP3JcyBDcnRMVnItekmAHFsVL9591+4nNeE6ce//yvLHlzJyriOFSL59p8OIw0/HwgLCHH10pGQEBJ0tAcZzeX+XZyRVFQBAOyHH+/FtyN/ulD/ltxQ6mx2WuFf2roYX/F7TIqUAVd0j6AVqRpikfwmeBbMipoda7sZkSu+Oc=
+  file: target/KiscSignManager-jar-with-dependencies.jar
+  skip_cleanup: true
+  on:
+    tags: true

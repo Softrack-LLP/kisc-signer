@@ -23,9 +23,9 @@
         </dependency>
         <!-- installed-localy -->
         <dependency>
-            <groupId>kz.refactoring</groupId>
-            <artifactId>crypto.gammaprov</artifactId>
-            <version>2.0.1.812-17-10-201111_02_26</version>
+            <groupId>kz.gamma</groupId>
+            <artifactId>crypto-gammaprov</artifactId>
+            <version>2.0.1.1140</version>
         </dependency>
         <dependency>
             <groupId>org.testng</groupId>
